@@ -24,7 +24,6 @@ export default function Autenticacao() {
     
     function logincomgoogle() {
         debugger
-        
     }
     
     return (
