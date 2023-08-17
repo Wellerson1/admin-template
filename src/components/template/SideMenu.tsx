@@ -1,10 +1,9 @@
+import useAuth from "../../data/hook/useAuth";
 import { IconHome, IconNotification, IconOut } from "../icons/MenuIcons";
 import MenuItem from "./MenuItem";
 
 export default function SideMenu() {
-    function logout() {
-        console.log('logout')
-    }
+    const {logout} = useAuth()
 
     return (
         <aside className={`
@@ -22,9 +21,13 @@ export default function SideMenu() {
                 <MenuItem url="/notificacoes" text="Notificações" icon={IconNotification}/>
             </ul>
             <ul>
-                <MenuItem className="text-red-600 
-                hover:bg-red-400 hover:text-white
-                dark:text-red-400 dark:hover:bg-red-400 dark:hover:text-white" onClick={() => logout()} text="Sair" icon={IconOut}/>
+                <MenuItem 
+                    onClick={() => logout()}
+                    className="text-red-600 
+                    hover:bg-red-400 hover:text-white
+                    dark:text-red-400 dark:hover:bg-red-400 dark:hover:text-white" 
+                    text="Sair" 
+                    icon={IconOut}/>
             </ul>
         </aside>
     )
