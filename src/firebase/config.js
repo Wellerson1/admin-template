@@ -1,8 +1,8 @@
 import firebase from "firebase"
 
-const NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyASy1zX-K2PkzwoHEKLd-UbhoZCmhQiGJQ,
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=admin-template-well.firebaseapp.com,
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=admin-template-well
+const NEXT_PUBLIC_FIREBASE_API_KEY="AIzaSyASy1zX-K2PkzwoHEKLd-UbhoZCmhQiGJQ",
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="admin-template-well.firebaseapp.com",
+NEXT_PUBLIC_FIREBASE_PROJECT_ID="admin-template-well"
 
 const firebaseConfig = {
     apiKey: NEXT_PUBLIC_FIREBASE_API_KEY,
