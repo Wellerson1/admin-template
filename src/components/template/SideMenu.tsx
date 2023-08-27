@@ -1,5 +1,5 @@
 import useAuth from "../../data/hook/useAuth";
-import { IconHome, IconNotification, IconOut } from "../icons/MenuIcons";
+import { IconCalculator, IconHome, IconNotification, IconOut } from "../icons/MenuIcons";
 import MenuItem from "./MenuItem";
 
 export default function SideMenu() {
@@ -19,6 +19,8 @@ export default function SideMenu() {
             <ul className={`flex-grow`}>
                 <MenuItem url="/" text="Home" icon={IconHome}/>
                 <MenuItem url="/notificacoes" text="Notificações" icon={IconNotification}/>
+                <MenuItem url="/notificacoes" text="Caculadora" icon={IconCalculator}/>
+
             </ul>
             <ul>
                 <MenuItem 

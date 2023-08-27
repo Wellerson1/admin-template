@@ -10,6 +10,8 @@ interface AuthContextProps {
     loginGoogle?: () => Promise<void>
     login?: (email, password) => Promise<void>
     cadastrar?: (email, password) => Promise<void>
+    redirect?: (email) => Promise<void>
+
     logout?: () => Promise<void>
     carregando?: boolean
 }
@@ -78,6 +80,16 @@ export function AuthProvider(props) {
         }
     }
 
+    async function redirect(email) {
+        try {
+            setCarregando(true)
+            const resp = await firebase.auth().sendPasswordResetEmail(email);
+
+        } finally {
+            setCarregando(false)
+        }
+    }
+
     async function loginGoogle() {
         try {
             setCarregando(true)
@@ -123,6 +135,7 @@ export function AuthProvider(props) {
             loginGoogle,
             login,
             cadastrar,
+            redirect,
             carregando,
             logout
         }}>
