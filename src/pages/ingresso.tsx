@@ -84,7 +84,7 @@ function IngressoComponent() {
   };
 
   useEffect(() => {
-    agendarSimularCliques(20);
+    agendarSimularCliques(100);
   }, []);
 
   return (
