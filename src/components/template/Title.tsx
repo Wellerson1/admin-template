@@ -8,7 +8,7 @@ export default function Title(props: TitleProps) {
     return(
         <div>
             <h1 className={`
-            font-black text-3xl text-gray-900 
+            font-black text-3xl text-blue-900 
             dark:text-white
             `}>{props.titulo}</h1>
             <h2 className={`

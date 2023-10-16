@@ -23,11 +23,9 @@ export default function Autenticacao() {
         await login(email, password);
       }
       if (modo === Modo.ESQUECI_SENHA) {
-        await redirect(email)
-        .then(() => {
-            setModo(Modo.LOGIN)
-            handleSuccess("Verifique seu e-mail para recuperação de senha");
-
+        await redirect(email).then(() => {
+          setModo(Modo.LOGIN);
+          handleSuccess("Verifique seu e-mail para recuperação de senha");
         });
       } else {
         await cadastrar(email, password);
