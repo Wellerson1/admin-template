@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, CSSProperties } from 'react';
 
 function IngressoComponent() {
   const [repeticoes, setRepeticoes] = useState<any>(20);
 
-  const containerStyle = {
+  const containerStyle: CSSProperties = {
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
     backgroundColor: '#f0f0f0',
     padding: '20px',
-    display: 'flex',            // Adicionado display flex
-    flexDirection: 'column',    // Direção de coluna
-    alignItems: 'center',       // Centralizar horizontalmente
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   };
 
   const titleStyle = {
